@@ -5,6 +5,9 @@ const isCheck = process.argv.includes("--check");
 const sourceDir = "articles";
 const outputDir = "qiita/public";
 const imageBaseUrl = process.env.IMAGE_BASE_URL?.replace(/\/$/, "");
+const configuredIds = existsSync("qiita-article-ids.json")
+  ? JSON.parse(readFileSync("qiita-article-ids.json", "utf8"))
+  : {};
 
 function splitFrontmatter(source, file) {
   const matched = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -50,7 +53,7 @@ for (const file of files) {
     ...topics(metadata, file).map((topic) => `  - ${JSON.stringify(topic)}`),
     "private: false",
     'updated_at: ""',
-    `id: ${existingId(target)}`,
+    `id: ${configuredIds[basename(file, ".md")] ?? existingId(target)}`,
     "organization_url_name: null",
     "slide: false",
     `ignorePublish: ${!published}`,

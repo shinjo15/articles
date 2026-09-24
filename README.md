@@ -7,6 +7,7 @@
 - `articles/<slug>.md` — Zenn記事。ファイル名は英小文字・数字・`-`・`_`で12〜50文字にします。
 - `images/<slug>/...` — 共通画像。Zennでは本文から `/images/<slug>/...` と参照します。
 - `qiita/public/` — 自動生成物。直接編集しません。
+- `qiita-article-ids.json` — Qiitaで既に公開済みの記事ID。既存記事を取り込むときだけ記録します。
 
 ## 執筆・公開
 
