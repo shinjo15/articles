@@ -247,3 +247,7 @@ GPTやClaudeが登場して以降、AIを活用したビジネスが数多く生
 
 - [ChatGPT](https://chatgpt.com/)
 - [『ChatGPTはどのように動いているのか？』（Amazon）](https://amzn.asia/d/0dul88aa)
+
+---
+
+> [Zenn版はこちら](https://zenn.dev/ryu_ssss/articles/how-chatgpt-works)

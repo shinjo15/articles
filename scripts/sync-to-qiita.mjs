@@ -5,6 +5,7 @@ const isCheck = process.argv.includes("--check");
 const sourceDir = "articles";
 const outputDir = "qiita/public";
 const imageBaseUrl = process.env.IMAGE_BASE_URL?.replace(/\/$/, "");
+const zennUsername = "ryu_ssss";
 const configuredIds = existsSync("qiita-article-ids.json")
   ? JSON.parse(readFileSync("qiita-article-ids.json", "utf8"))
   : {};
@@ -43,6 +44,8 @@ for (const file of files) {
   const title = scalar(metadata, "title", file);
   const published = scalar(metadata, "published", file) === "true";
   const target = join(outputDir, file);
+  const slug = basename(file, ".md");
+  const zennUrl = `https://zenn.dev/${zennUsername}/articles/${slug}`;
   const qiitaBody = imageBaseUrl
     ? body.replaceAll(/\]\(\/images\/([^\)]+)\)/g, `](${imageBaseUrl}/images/$1)`)
     : body;
@@ -62,7 +65,7 @@ for (const file of files) {
     "---",
     ""
   ].join("\n");
-  generated.set(target, `${header}${qiitaBody}`);
+  generated.set(target, `${header}${qiitaBody.trimEnd()}\n\n---\n\n> [Zenn版はこちら](${zennUrl})\n`);
 }
 
 if (isCheck) {

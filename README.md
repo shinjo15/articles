@@ -2,6 +2,8 @@
 
 `articles/` が原稿の唯一の正本です。`main` への push で、Zenn は公式GitHub連携により同期され、Qiita はGitHub Actionsで同期されます。
 
+Qiitaへ投稿する本文の末尾には、対応するZenn記事へのリンクが自動で追加されます。
+
 ## 配置
 
 - `articles/<slug>.md` — Zenn記事。ファイル名は英小文字・数字・`-`・`_`で12〜50文字にします。
