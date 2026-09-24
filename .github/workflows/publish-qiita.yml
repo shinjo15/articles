@@ -1,0 +1,38 @@
+name: Publish to Qiita
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "articles/**"
+      - "images/**"
+      - "scripts/sync-to-qiita.mjs"
+      - ".github/workflows/publish-qiita.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-qiita-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      # Qiita上では公開リポジトリの画像を参照します。
+      IMAGE_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/sync-to-qiita.mjs
+      - uses: increments/qiita-cli/actions/publish@v1
+        with:
+          qiita-token: ${{ secrets.QIITA_TOKEN }}
+          root: qiita

@@ -1,0 +1,9 @@
+{
+  "name": "articles",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:qiita": "node scripts/sync-to-qiita.mjs",
+    "check": "node scripts/sync-to-qiita.mjs --check"
+  }
+}
