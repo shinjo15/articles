@@ -203,7 +203,7 @@ Attentionで行うことは、入力された文章をトークンに分割し�
 
 Transformerを説明する図は「Attention Is All You Need」で提唱された以下のものがありますが、今回の説明ではすべてを理解する必要はありません。
 
-![[image (1).png]]
+![ChatGPTの仕組みを示すイラスト](/images/how-chatgpt-works/illustration.png)
 
 基本的にやることはそこまで難しくありません。GPTモデルを利用する場合は、右側のデコーダーだけ見れば十分です。
 

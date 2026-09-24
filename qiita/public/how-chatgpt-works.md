@@ -1,11 +1,11 @@
 ---
-title: ChatGPTはどのように動いているのか
+title: "ChatGPTはどのように動いているのか"
 tags:
-  - ChatGPT
-  - AI
-  - LLM
+  - "chatgpt"
+  - "ai"
+  - "llm"
 private: false
-updated_at: '2026-09-24T16:32:08+09:00'
+updated_at: ""
 id: 6c7d771063c469692ea8
 organization_url_name: null
 slide: false
@@ -79,7 +79,7 @@ Transformer自体の説明をする前に「ベクトル」と「行列」につ
 - 0に近い = 関係性が低い
 - -1に近い = 正反対の性質を持つ
 
-![ChatGPTの概念図](https://raw.githubusercontent.com/shinjo15/articles/main/images/how-chatgpt-works/chatgpt-diagram.png)
+![ChatGPTの概念図](/images/how-chatgpt-works/chatgpt-diagram.png)
 
 #### 2-1-4. 正規化
 
@@ -211,7 +211,7 @@ Attentionで行うことは、入力された文章をトークンに分割し�
 
 Transformerを説明する図は「Attention Is All You Need」で提唱された以下のものがありますが、今回の説明ではすべてを理解する必要はありません。
 
-![[image (1).png]]
+![ChatGPTの仕組みを示すイラスト](/images/how-chatgpt-works/illustration.png)
 
 基本的にやることはそこまで難しくありません。GPTモデルを利用する場合は、右側のデコーダーだけ見れば十分です。
 
