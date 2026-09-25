@@ -1,11 +1,8 @@
 ---
-title: ソースコードを書いてから、画面に結果が表示されるまで
-status: draft
-tags:
-  - プログラミング
-  - コンピューターの仕組み
-  - 読書メモ
-source: 『プログラミングはなぜ動くのか』
+title: "ソースコードを書いてから、画面に結果が表示されるまで"
+emoji: "💻"
+type: "tech"
+topics: ["programming", "computer", "book"]
 published: true
 ---
 
