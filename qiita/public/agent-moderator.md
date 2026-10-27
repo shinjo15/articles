@@ -32,9 +32,9 @@ agreed_posting_campaign_term: false
 
 ## 拡張機能の仕組み
 
-![[articles/images/agent-moderator/スクリーンショット 2026-10-24 141417.png]]
+![拡張機能の画面例](https://raw.githubusercontent.com/shinjo15/articles/main/images/agent-moderator/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-10-24%20141417.png)
 
-![[articles/images/agent-moderator/スクリーンショット 2026-10-24 141610.png]]
+![スコアリング設定の画面例](https://raw.githubusercontent.com/shinjo15/articles/main/images/agent-moderator/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-10-24%20141610.png)
 
 この拡張機能を使うには、JevとYouTube側のAPIキーをそれぞれ用意していただく必要があります。チャットをスコアリングし、悪質と判定されたコメントを表示しないようにできます。
 
