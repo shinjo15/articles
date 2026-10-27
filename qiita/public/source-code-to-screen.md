@@ -5,7 +5,7 @@ tags:
   - computer
   - Book
 private: false
-updated_at: '2026-09-25T12:42:27+09:00'
+updated_at: '2026-10-27T11:02:41+09:00'
 id: ca6f02b43908e2858533
 organization_url_name: null
 slide: false
