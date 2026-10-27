@@ -5,7 +5,7 @@ tags:
   - AI
   - LLM
 private: false
-updated_at: '2026-10-27T11:02:41+09:00'
+updated_at: '2026-10-27T11:49:22+09:00'
 id: 6c7d771063c469692ea8
 organization_url_name: null
 slide: false
